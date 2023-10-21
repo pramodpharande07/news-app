@@ -7,6 +7,18 @@ export class NewsItem extends Component {
     return (
       <div className="my-3">
         <div className="card" style={{ width: "18rem" }}>
+        <div style={{
+                 display: "flex",
+                 justifyContent: "flex-end",
+                 position: "absolute",
+                 right: 0,
+            }} >
+            <span
+              className="badge rounded-pill bg-danger"
+            >
+              {source}
+            </span>
+            </div>
           <img
             src={
               !imageUrl
@@ -17,12 +29,8 @@ export class NewsItem extends Component {
             alt="..."
           />
           <div className="card-body">
-            <span
-              className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-              style={{ left: "50%", zIndex: 1 }}
-            >
-              {source}
-            </span>
+            
+           
             <h5 className="card-title">{title}</h5>
 
             {/* badges in bootstrap  */}
